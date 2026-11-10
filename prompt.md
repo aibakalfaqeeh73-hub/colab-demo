@@ -124,3 +124,7 @@ It is acceptable for a single order to cover more than one case. Add a brief not
 - Use explicit, understandable Python names and comments for business rules.
 - Do not add unrelated features, web access, Instagram posting, persistent storage, or LLM behavior.
 - Ensure the notebook can be run from top to bottom in a fresh Colab runtime.
+
+## Prompt refinement log
+
+The prompt was refined after reviewing the stock limits and the graph branches. The test quantities were adjusted so each expected outcome is possible with the stated opening inventory: a two-unit babka order reaches rugelach, a four-unit babka order reaches sourdough after rugelach is insufficient, and an eleven-unit babka order exercises cancellation after two failed substitute attempts. Additional cases were added for invalid quantities, the end of a shorter substitute chain, Jerusalem delivery, pickup outside Jerusalem, the greater-than-150 ILS discount, and the Friday exception. The final specification also makes the fixed per-invocation inventory, rejected-order output values, and ordered `steps` history explicit.
